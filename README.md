@@ -97,3 +97,16 @@ rm 'logs/running_logs.log'
     - You can see the changes in the Plots and Compare in DVC Studio between 2 different commit branches .
 
         - Link  https://studio.iterative.ai/user/Jateendra/projects/DVC-NLP_Pipeline-AIOPs-zbmme52lxp?panels=plots%2C&commits=4328253%2Cprimary
+        
+### CI/CD Running :
+
+    - Add a file : .github/workflows/ci-cd.yaml
+    - << Write code for execution >>
+    - Make sure below setting already done in github :
+        repo_token: ${{ secrets.GITHUB_TOKEN }}
+        If not set by : Profile -> setting -> Developer settings -> Github Apps -> Personal access tokens
+    - commit the file : ci-cd.yaml
+        Follow by : Repository -> Actions -> click link & see the status of execution .
+    - You can see all the changes in DVC studio also : https://studio.iterative.ai/user/Jateendra/projects/DVC-NLP_Pipeline-AIOPs-zbmme52lxp?commits=4328285%2Cprimary
+        You can do a lot of parameter changes in DVC studio and keep running the experiments.
+        Which ever parameter suits best , you can choose that and merge with main branch .
